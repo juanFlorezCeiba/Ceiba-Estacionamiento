@@ -20,11 +20,9 @@ stages{
 stage('Checkout') {
 steps{
 echo "------------>Checkout<------------"
-checkout([$​class: 'GitSCM'​ , ​branches: [[name: '*/master']]​,
+checkout([$​class: 'GitSCM'​, ​branches: [[name: '*/master']]​,
 doGenerateSubmoduleConfigurations: false, extensions: [], ​gitTool:
-'Git_Centos'​, submoduleCfg: [], userRemoteConfigs: [[​credentialsId:
-'GitHub_juanFlorezCeiba', url:
-'https://github.com/juanFlorezCeiba/Ceiba-Estacionamiento​']]])
+'Git_Centos'​, submoduleCfg: [], userRemoteConfigs: [[​credentialsId: 'GitHub_juanFlorezCeiba', url: 'https://github.com/juanFlorezCeiba/Ceiba-Estacionamiento​']]])
 }
 }
 stage('Compile') {
